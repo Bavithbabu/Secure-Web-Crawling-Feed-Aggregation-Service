@@ -1,0 +1,17 @@
+for the tokenHelper 
+there are 1.access token -> memory/localStorage
+          2.Refresh token -> httpOnly cookie save from XSS
+           these tokens are used for identify and authorize the user
+
+After user succefully logged in then this tokenHelper function create a token,refreshtoken
+that willbe used for backend authenticate the future request
+
+to get the token we need jwt -> we get it from the github.com/dgrijalva/jwt-go
+        this jwt has this jwt.Strandclaims that will give us the expiry and issur etc..
+
+
+
+
+for the signup function in usercontroller we need the ctx,cancel as they used for MONGODB operation need the context(ctx)
+After the 100 seconds auto cancel -> revent the request hanging forever
+
