@@ -75,14 +75,14 @@ func Signup() gin.HandlerFunc {
 			return
 		}
 
-		count, err = userCollection.CountDocuments(ctx, bson.M{"phone": user.Phone})
+		count2, err := userCollection.CountDocuments(ctx, bson.M{"phone": user.Phone})
 		if err != nil {
 			log.Panic(err)
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "error occurred during checking the phone number"})
 			return
 		}
 
-		if count > 0 {
+		if count2 > 0 {
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "this phone number already exists"})
 			return
 		}
