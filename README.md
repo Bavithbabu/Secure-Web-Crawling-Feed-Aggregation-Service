@@ -1,6 +1,4 @@
-cat > README.md << 'EOF'
 # 🕷️ Secure Web Crawling Feed Aggregation Service
-
 
 
 A Go backend service that lets users subscribe to content sources, trigger crawling, and retrieve a personalized aggregated article feed. Built as a learning project focused on backend engineering, Go concurrency, and real-world system design patterns.
